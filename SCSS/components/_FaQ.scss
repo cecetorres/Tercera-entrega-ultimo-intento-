@@ -1,0 +1,20 @@
+.img1{width: fit-content;}
+.img2{width: fit-content;}
+.img3{width: fit-content;}
+.img4{width: fit-content;}
+.img5{width: fit-content;}
+.img6{width: fit-content;}
+.img7{width: fit-content;}
+.img8{width: fit-content;}
+.img9{width: fit-content;}
+.img10{width: fit-content;}
+
+/* ----------EJERCICIO DE MAPS----------- */
+$cuadros_azules:(
+    claros: #339be0,
+    oscuros: #081694);
+@each $cuadro, $color in $cuadros_azules{
+    .cuadro-#{$cuadro}{
+        color:$color;
+    }
+}

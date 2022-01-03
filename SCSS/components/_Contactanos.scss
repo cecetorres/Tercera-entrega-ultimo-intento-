@@ -1,0 +1,12 @@
+.formulario{
+    background-color: #48CAE4;
+    border: solid 2px black;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    &:hover{
+        animation-name: aumento_imagenes;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+    }
+}

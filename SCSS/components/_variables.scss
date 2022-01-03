@@ -1,0 +1,111 @@
+/* MARGENES */
+$con-margen: 2em;
+$margen-grueso: 6em;
+/* COLORES DE FONDO */
+$fondo-azul: #ADE8F4;
+$fondo-azul2: #48CAE4 ;
+$fondo-azul3: #CAF0F8;
+$fondo-azul4: #023E8A;
+$fondo-negro: black;
+
+/* ENCABEZADO */
+header{
+    background-color: $fondo-azul3;
+    height: 6em;
+    .navbar-collapse{
+        background-color: $fondo-azul3;
+    }
+    .logo{
+    width: 5em;
+    padding: .5em;
+    }
+}
+/* ANIMACION RAYA DEBAJO */
+.subrayado{
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    &:hover & :focus {
+        background-size: 100% 2px;
+    }
+}
+/* ANIMACION AUMENTO DE IMAGENES */
+@keyframes aumento_imagenes{
+    0%{transform: scale(1,1);}
+    50%{transform: scale(.5,.5);}
+    100%{transform: scale(1,1);}
+}
+/* PIE DE PAGINA */
+.pie-de-pagina{
+    background-color: $fondo-azul3;
+    color: black;
+    height: 3.5em;
+}
+/* MARGENES */
+.con-margen{margin-top: $con-margen;}
+.margen-izquierdo{margin-left: $margen-grueso;}
+.con-margen-grueso{margin-top: $margen-grueso;}
+.con-espacio-grueso{padding-top: $margen-grueso;}
+.ordenar{justify-content: space-around;}
+.recortar{max-height: 40em;}
+
+/* BOTON DE WHATSAPP */
+.boton--contacto{
+    position: fixed;
+    right: 1%;
+    bottom: 10%;
+    &:hover{
+        animation-name: rotacion_logo;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+    }
+}
+/* ------------EJERCICIO CON EXTEND-------------- */
+.boton--ayuda{
+    @extend.boton--contacto;
+    bottom: 25%
+}
+/* --------------------------------------------------- */
+@keyframes rotacion_logo{
+    0%{ transform: rotate(0deg);}
+    50%{ transform: rotate(20deg);}
+    100%{ transform: rotate(0deg);}
+
+}
+/* TITULOS BLANCOS CON RAYAS NEGRAS */
+.titulo{
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    .n{
+        text-align: center;
+        background-color: white;
+        width: 100%;
+        height: 8em;  
+        padding-top: 2em;
+    }
+    .n{
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: 8em;  
+    padding-top: 2em;
+    }
+    .titulo::after,.titulo::before{
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 3px;
+        background-color: black;
+        background-color: currentColor;
+        top: 0.6em;
+    }
+    .titulo::before{
+        left: -140px;
+    }
+    .titulo::after{
+        right: -140px;
+    }
+}
